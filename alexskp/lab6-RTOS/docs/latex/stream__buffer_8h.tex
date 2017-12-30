@@ -1,0 +1,228 @@
+\hypertarget{stream__buffer_8h}{}\section{src/\+Free\+R\+T\+O\+S/include/stream\+\_\+buffer.h File Reference}
+\label{stream__buffer_8h}\index{src/\+Free\+R\+T\+O\+S/include/stream\+\_\+buffer.\+h@{src/\+Free\+R\+T\+O\+S/include/stream\+\_\+buffer.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stream__buffer_8h_a39aa4dd8b83e2df7ded291f863fb5fed}{x\+Stream\+Buffer\+Create}(x\+Buffer\+Size\+Bytes,  x\+Trigger\+Level\+Bytes)~\hyperlink{stream__buffer_8h_a7a613c6fa11323c871ce7991db214096}{x\+Stream\+Buffer\+Generic\+Create}( x\+Buffer\+Size\+Bytes, x\+Trigger\+Level\+Bytes, \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE} )
+\item 
+\#define \hyperlink{stream__buffer_8h_a3c248575ac1b83801db605b32a118f77}{x\+Stream\+Buffer\+Create\+Static}(x\+Buffer\+Size\+Bytes,  x\+Trigger\+Level\+Bytes,  puc\+Stream\+Buffer\+Storage\+Area,  px\+Static\+Stream\+Buffer)~\hyperlink{stream__buffer_8h_a1263847a3f77a4f34462df326d78c48c}{x\+Stream\+Buffer\+Generic\+Create\+Static}( x\+Buffer\+Size\+Bytes, x\+Trigger\+Level\+Bytes, \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE}, puc\+Stream\+Buffer\+Storage\+Area, px\+Static\+Stream\+Buffer )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_a35cdf3b6bf677086b9128782f762499d}{x\+Stream\+Buffer\+Send} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, const void $\ast$pv\+Tx\+Data, size\+\_\+t x\+Data\+Length\+Bytes, \hyperlink{portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t} x\+Ticks\+To\+Wait) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_a1dab226e99230e01e79bc2b5c0605e44}{x\+Stream\+Buffer\+Send\+From\+I\+SR} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, const void $\ast$pv\+Tx\+Data, size\+\_\+t x\+Data\+Length\+Bytes, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$const px\+Higher\+Priority\+Task\+Woken) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_a55efc144b988598d84a6087d3e20b507}{x\+Stream\+Buffer\+Receive} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, void $\ast$pv\+Rx\+Data, size\+\_\+t x\+Buffer\+Length\+Bytes, \hyperlink{portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t} x\+Ticks\+To\+Wait) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_a6c882a1d9f26c40f93f271bd1b844b3b}{x\+Stream\+Buffer\+Receive\+From\+I\+SR} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, void $\ast$pv\+Rx\+Data, size\+\_\+t x\+Buffer\+Length\+Bytes, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$const px\+Higher\+Priority\+Task\+Woken) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+void \hyperlink{stream__buffer_8h_a05dc9d2ae220a050526a062eddf6d7a2}{v\+Stream\+Buffer\+Delete} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_ae393d82ee06e89692248a4381f85dc86}{x\+Stream\+Buffer\+Is\+Full} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_af65cd558025ddc29ca68fba1b3f5dc19}{x\+Stream\+Buffer\+Is\+Empty} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_a5253429645c67902c2fc8682f8af0aac}{x\+Stream\+Buffer\+Reset} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_a9a78e0206cb1dc343c329f9db579208d}{x\+Stream\+Buffer\+Spaces\+Available} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+size\+\_\+t \hyperlink{stream__buffer_8h_af32d1737de29f24ee31ac1e3c407d9fd}{x\+Stream\+Buffer\+Bytes\+Available} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_a28f0280587c76e71efeaa8f415ebde04}{x\+Stream\+Buffer\+Set\+Trigger\+Level} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, size\+\_\+t x\+Trigger\+Level) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_abc37189e4eb8618f5434ae333dd50b23}{x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$px\+Higher\+Priority\+Task\+Woken) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} \hyperlink{stream__buffer_8h_ac12e93e96e0eafbc0e981d00e7275d32}{x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR} (\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$px\+Higher\+Priority\+Task\+Woken) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} \hyperlink{stream__buffer_8h_a7a613c6fa11323c871ce7991db214096}{x\+Stream\+Buffer\+Generic\+Create} (size\+\_\+t x\+Buffer\+Size\+Bytes, size\+\_\+t x\+Trigger\+Level\+Bytes, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Is\+Message\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\item 
+\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} \hyperlink{stream__buffer_8h_a1263847a3f77a4f34462df326d78c48c}{x\+Stream\+Buffer\+Generic\+Create\+Static} (size\+\_\+t x\+Buffer\+Size\+Bytes, size\+\_\+t x\+Trigger\+Level\+Bytes, \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Is\+Message\+Buffer, uint8\+\_\+t $\ast$const puc\+Stream\+Buffer\+Storage\+Area, \hyperlink{_free_r_t_o_s_8h_a97741869d647b29aa4b0698a7de79a6a}{Static\+Stream\+Buffer\+\_\+t} $\ast$const px\+Static\+Stream\+Buffer) \hyperlink{mpu__wrappers_8h_a4785c4f4a8c04b835139dcc2a6682078}{P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+ON}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stream__buffer_8h_a39aa4dd8b83e2df7ded291f863fb5fed}\label{stream__buffer_8h_a39aa4dd8b83e2df7ded291f863fb5fed}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Create@{x\+Stream\+Buffer\+Create}}
+\index{x\+Stream\+Buffer\+Create@{x\+Stream\+Buffer\+Create}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Create}{xStreamBufferCreate}}
+{\footnotesize\ttfamily \#define x\+Stream\+Buffer\+Create(\begin{DoxyParamCaption}\item[{}]{x\+Buffer\+Size\+Bytes,  }\item[{}]{x\+Trigger\+Level\+Bytes }\end{DoxyParamCaption})~\hyperlink{stream__buffer_8h_a7a613c6fa11323c871ce7991db214096}{x\+Stream\+Buffer\+Generic\+Create}( x\+Buffer\+Size\+Bytes, x\+Trigger\+Level\+Bytes, \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE} )}
+
+
+
+Definition at line 129 of file stream\+\_\+buffer.\+h.
+
+\mbox{\Hypertarget{stream__buffer_8h_a3c248575ac1b83801db605b32a118f77}\label{stream__buffer_8h_a3c248575ac1b83801db605b32a118f77}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Create\+Static@{x\+Stream\+Buffer\+Create\+Static}}
+\index{x\+Stream\+Buffer\+Create\+Static@{x\+Stream\+Buffer\+Create\+Static}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Create\+Static}{xStreamBufferCreateStatic}}
+{\footnotesize\ttfamily \#define x\+Stream\+Buffer\+Create\+Static(\begin{DoxyParamCaption}\item[{}]{x\+Buffer\+Size\+Bytes,  }\item[{}]{x\+Trigger\+Level\+Bytes,  }\item[{}]{puc\+Stream\+Buffer\+Storage\+Area,  }\item[{}]{px\+Static\+Stream\+Buffer }\end{DoxyParamCaption})~\hyperlink{stream__buffer_8h_a1263847a3f77a4f34462df326d78c48c}{x\+Stream\+Buffer\+Generic\+Create\+Static}( x\+Buffer\+Size\+Bytes, x\+Trigger\+Level\+Bytes, \hyperlink{projdefs_8h_aa56260e937e7e203026707e5ba944273}{pd\+F\+A\+L\+SE}, puc\+Stream\+Buffer\+Storage\+Area, px\+Static\+Stream\+Buffer )}
+
+
+
+Definition at line 210 of file stream\+\_\+buffer.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}\label{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!Stream\+Buffer\+Handle\+\_\+t@{Stream\+Buffer\+Handle\+\_\+t}}
+\index{Stream\+Buffer\+Handle\+\_\+t@{Stream\+Buffer\+Handle\+\_\+t}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{Stream\+Buffer\+Handle\+\_\+t}{StreamBufferHandle\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}
+
+Type by which stream buffers are referenced. For example, a call to \hyperlink{stream__buffer_8h_a39aa4dd8b83e2df7ded291f863fb5fed}{x\+Stream\+Buffer\+Create()} returns an Stream\+Buffer\+Handle\+\_\+t variable that can then be used as a parameter to \hyperlink{stream__buffer_8h_a35cdf3b6bf677086b9128782f762499d}{x\+Stream\+Buffer\+Send()}, \hyperlink{stream__buffer_8h_a55efc144b988598d84a6087d3e20b507}{x\+Stream\+Buffer\+Receive()}, etc. 
+
+Definition at line 61 of file stream\+\_\+buffer.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stream__buffer_8h_a05dc9d2ae220a050526a062eddf6d7a2}\label{stream__buffer_8h_a05dc9d2ae220a050526a062eddf6d7a2}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!v\+Stream\+Buffer\+Delete@{v\+Stream\+Buffer\+Delete}}
+\index{v\+Stream\+Buffer\+Delete@{v\+Stream\+Buffer\+Delete}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{v\+Stream\+Buffer\+Delete()}{vStreamBufferDelete()}}
+{\footnotesize\ttfamily void v\+Stream\+Buffer\+Delete (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 332 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_af32d1737de29f24ee31ac1e3c407d9fd}\label{stream__buffer_8h_af32d1737de29f24ee31ac1e3c407d9fd}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Bytes\+Available@{x\+Stream\+Buffer\+Bytes\+Available}}
+\index{x\+Stream\+Buffer\+Bytes\+Available@{x\+Stream\+Buffer\+Bytes\+Available}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Bytes\+Available()}{xStreamBufferBytesAvailable()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Bytes\+Available (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 472 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a7a613c6fa11323c871ce7991db214096}\label{stream__buffer_8h_a7a613c6fa11323c871ce7991db214096}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Generic\+Create@{x\+Stream\+Buffer\+Generic\+Create}}
+\index{x\+Stream\+Buffer\+Generic\+Create@{x\+Stream\+Buffer\+Generic\+Create}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Generic\+Create()}{xStreamBufferGenericCreate()}}
+{\footnotesize\ttfamily \hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer\+Generic\+Create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x\+Buffer\+Size\+Bytes,  }\item[{size\+\_\+t}]{x\+Trigger\+Level\+Bytes,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t}}]{x\+Is\+Message\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stream__buffer_8h_a1263847a3f77a4f34462df326d78c48c}\label{stream__buffer_8h_a1263847a3f77a4f34462df326d78c48c}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Generic\+Create\+Static@{x\+Stream\+Buffer\+Generic\+Create\+Static}}
+\index{x\+Stream\+Buffer\+Generic\+Create\+Static@{x\+Stream\+Buffer\+Generic\+Create\+Static}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Generic\+Create\+Static()}{xStreamBufferGenericCreateStatic()}}
+{\footnotesize\ttfamily \hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t} x\+Stream\+Buffer\+Generic\+Create\+Static (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x\+Buffer\+Size\+Bytes,  }\item[{size\+\_\+t}]{x\+Trigger\+Level\+Bytes,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t}}]{x\+Is\+Message\+Buffer,  }\item[{uint8\+\_\+t $\ast$const}]{puc\+Stream\+Buffer\+Storage\+Area,  }\item[{\hyperlink{_free_r_t_o_s_8h_a97741869d647b29aa4b0698a7de79a6a}{Static\+Stream\+Buffer\+\_\+t} $\ast$const}]{px\+Static\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stream__buffer_8h_af65cd558025ddc29ca68fba1b3f5dc19}\label{stream__buffer_8h_af65cd558025ddc29ca68fba1b3f5dc19}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Is\+Empty@{x\+Stream\+Buffer\+Is\+Empty}}
+\index{x\+Stream\+Buffer\+Is\+Empty@{x\+Stream\+Buffer\+Is\+Empty}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Is\+Empty()}{xStreamBufferIsEmpty()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Is\+Empty (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 899 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_ae393d82ee06e89692248a4381f85dc86}\label{stream__buffer_8h_ae393d82ee06e89692248a4381f85dc86}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Is\+Full@{x\+Stream\+Buffer\+Is\+Full}}
+\index{x\+Stream\+Buffer\+Is\+Full@{x\+Stream\+Buffer\+Is\+Full}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Is\+Full()}{xStreamBufferIsFull()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Is\+Full (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 922 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a55efc144b988598d84a6087d3e20b507}\label{stream__buffer_8h_a55efc144b988598d84a6087d3e20b507}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Receive@{x\+Stream\+Buffer\+Receive}}
+\index{x\+Stream\+Buffer\+Receive@{x\+Stream\+Buffer\+Receive}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Receive()}{xStreamBufferReceive()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Receive (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{void $\ast$}]{pv\+Rx\+Data,  }\item[{size\+\_\+t}]{x\+Buffer\+Length\+Bytes,  }\item[{\hyperlink{portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t}}]{x\+Ticks\+To\+Wait }\end{DoxyParamCaption})}
+
+
+
+Definition at line 688 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_ac12e93e96e0eafbc0e981d00e7275d32}\label{stream__buffer_8h_ac12e93e96e0eafbc0e981d00e7275d32}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR@{x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR}}
+\index{x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR@{x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+S\+R()}{xStreamBufferReceiveCompletedFromISR()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Receive\+Completed\+From\+I\+SR (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$}]{px\+Higher\+Priority\+Task\+Woken }\end{DoxyParamCaption})}
+
+
+
+Definition at line 987 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a6c882a1d9f26c40f93f271bd1b844b3b}\label{stream__buffer_8h_a6c882a1d9f26c40f93f271bd1b844b3b}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Receive\+From\+I\+SR@{x\+Stream\+Buffer\+Receive\+From\+I\+SR}}
+\index{x\+Stream\+Buffer\+Receive\+From\+I\+SR@{x\+Stream\+Buffer\+Receive\+From\+I\+SR}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Receive\+From\+I\+S\+R()}{xStreamBufferReceiveFromISR()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Receive\+From\+I\+SR (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{void $\ast$}]{pv\+Rx\+Data,  }\item[{size\+\_\+t}]{x\+Buffer\+Length\+Bytes,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$const}]{px\+Higher\+Priority\+Task\+Woken }\end{DoxyParamCaption})}
+
+
+
+Definition at line 792 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a5253429645c67902c2fc8682f8af0aac}\label{stream__buffer_8h_a5253429645c67902c2fc8682f8af0aac}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Reset@{x\+Stream\+Buffer\+Reset}}
+\index{x\+Stream\+Buffer\+Reset@{x\+Stream\+Buffer\+Reset}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Reset()}{xStreamBufferReset()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Reset (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 365 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a35cdf3b6bf677086b9128782f762499d}\label{stream__buffer_8h_a35cdf3b6bf677086b9128782f762499d}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Send@{x\+Stream\+Buffer\+Send}}
+\index{x\+Stream\+Buffer\+Send@{x\+Stream\+Buffer\+Send}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Send()}{xStreamBufferSend()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Send (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{const void $\ast$}]{pv\+Tx\+Data,  }\item[{size\+\_\+t}]{x\+Data\+Length\+Bytes,  }\item[{\hyperlink{portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t}}]{x\+Ticks\+To\+Wait }\end{DoxyParamCaption})}
+
+
+
+Definition at line 484 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_abc37189e4eb8618f5434ae333dd50b23}\label{stream__buffer_8h_abc37189e4eb8618f5434ae333dd50b23}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR@{x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR}}
+\index{x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR@{x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Send\+Completed\+From\+I\+S\+R()}{xStreamBufferSendCompletedFromISR()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Send\+Completed\+From\+I\+SR (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$}]{px\+Higher\+Priority\+Task\+Woken }\end{DoxyParamCaption})}
+
+
+
+Definition at line 957 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a1dab226e99230e01e79bc2b5c0605e44}\label{stream__buffer_8h_a1dab226e99230e01e79bc2b5c0605e44}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Send\+From\+I\+SR@{x\+Stream\+Buffer\+Send\+From\+I\+SR}}
+\index{x\+Stream\+Buffer\+Send\+From\+I\+SR@{x\+Stream\+Buffer\+Send\+From\+I\+SR}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Send\+From\+I\+S\+R()}{xStreamBufferSendFromISR()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Send\+From\+I\+SR (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{const void $\ast$}]{pv\+Tx\+Data,  }\item[{size\+\_\+t}]{x\+Data\+Length\+Bytes,  }\item[{\hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} $\ast$const}]{px\+Higher\+Priority\+Task\+Woken }\end{DoxyParamCaption})}
+
+
+
+Definition at line 585 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a28f0280587c76e71efeaa8f415ebde04}\label{stream__buffer_8h_a28f0280587c76e71efeaa8f415ebde04}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Set\+Trigger\+Level@{x\+Stream\+Buffer\+Set\+Trigger\+Level}}
+\index{x\+Stream\+Buffer\+Set\+Trigger\+Level@{x\+Stream\+Buffer\+Set\+Trigger\+Level}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Set\+Trigger\+Level()}{xStreamBufferSetTriggerLevel()}}
+{\footnotesize\ttfamily \hyperlink{portmacro_8h_a46fb21e00ae0729d7515c0fbf2269796}{Base\+Type\+\_\+t} x\+Stream\+Buffer\+Set\+Trigger\+Level (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer,  }\item[{size\+\_\+t}]{x\+Trigger\+Level }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file stream\+\_\+buffer.\+c.
+
+\mbox{\Hypertarget{stream__buffer_8h_a9a78e0206cb1dc343c329f9db579208d}\label{stream__buffer_8h_a9a78e0206cb1dc343c329f9db579208d}} 
+\index{stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}!x\+Stream\+Buffer\+Spaces\+Available@{x\+Stream\+Buffer\+Spaces\+Available}}
+\index{x\+Stream\+Buffer\+Spaces\+Available@{x\+Stream\+Buffer\+Spaces\+Available}!stream\+\_\+buffer.\+h@{stream\+\_\+buffer.\+h}}
+\subsubsection{\texorpdfstring{x\+Stream\+Buffer\+Spaces\+Available()}{xStreamBufferSpacesAvailable()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Stream\+Buffer\+Spaces\+Available (\begin{DoxyParamCaption}\item[{\hyperlink{stream__buffer_8h_a023fdaf7aa7415dc027147e223c0f710}{Stream\+Buffer\+Handle\+\_\+t}}]{x\+Stream\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 448 of file stream\+\_\+buffer.\+c.
+
