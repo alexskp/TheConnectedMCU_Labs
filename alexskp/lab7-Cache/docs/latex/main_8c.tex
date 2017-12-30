@@ -1,0 +1,89 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}user.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{main_8c_a0d2dcfb7871f258cb0f5697fbddcf406}{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR} (int nr, int nc, int a\mbox{[}$\,$\mbox{]}\mbox{[}nc\mbox{]}, int $\ast$ret\+\_\+sum)
+\item 
+unsigned \hyperlink{main_8c_a3fafeb3854f7de9415ed9e79b4b69efe}{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC} (int nr, int nc, int a\mbox{[}$\,$\mbox{]}\mbox{[}nc\mbox{]}, int $\ast$ret\+\_\+sum)
+\item 
+int \hyperlink{main_8c_a56bf86b38ec89343f2aea95b91e0062c}{Pollute\+\_\+\+Cache} (void)
+\item 
+int32\+\_\+t \hyperlink{main_8c_a52d2cba30e6946c95578be946ac12a65}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a71ab50c4ac4dceffb2edf92ca8ba4b63}{dummy} \mbox{[}D\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE/sizeof(int)\mbox{]}
+\item 
+int \hyperlink{main_8c_a9b765e754ae99b030c0282acee8b397a}{aa} \mbox{[}N\+U\+M\+\_\+\+R\+O\+WS\mbox{]}\mbox{[}N\+U\+M\+\_\+\+C\+O\+LS\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a52d2cba30e6946c95578be946ac12a65}\label{main_8c_a52d2cba30e6946c95578be946ac12a65}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int32\+\_\+t main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a56bf86b38ec89343f2aea95b91e0062c}\label{main_8c_a56bf86b38ec89343f2aea95b91e0062c}} 
+\index{main.\+c@{main.\+c}!Pollute\+\_\+\+Cache@{Pollute\+\_\+\+Cache}}
+\index{Pollute\+\_\+\+Cache@{Pollute\+\_\+\+Cache}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Pollute\+\_\+\+Cache()}{Pollute\_Cache()}}
+{\footnotesize\ttfamily int Pollute\+\_\+\+Cache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a0d2dcfb7871f258cb0f5697fbddcf406}\label{main_8c_a0d2dcfb7871f258cb0f5697fbddcf406}} 
+\index{main.\+c@{main.\+c}!Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR@{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR}}
+\index{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR@{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+C\+R()}{Timed\_Array\_Test\_CR()}}
+{\footnotesize\ttfamily unsigned Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+CR (\begin{DoxyParamCaption}\item[{int}]{nr,  }\item[{int}]{nc,  }\item[{int}]{a\mbox{[}$\,$\mbox{]}\mbox{[}nc\mbox{]},  }\item[{int $\ast$}]{ret\+\_\+sum }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a3fafeb3854f7de9415ed9e79b4b69efe}\label{main_8c_a3fafeb3854f7de9415ed9e79b4b69efe}} 
+\index{main.\+c@{main.\+c}!Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC@{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC}}
+\index{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC@{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+R\+C()}{Timed\_Array\_Test\_RC()}}
+{\footnotesize\ttfamily unsigned Timed\+\_\+\+Array\+\_\+\+Test\+\_\+\+RC (\begin{DoxyParamCaption}\item[{int}]{nr,  }\item[{int}]{nc,  }\item[{int}]{a\mbox{[}$\,$\mbox{]}\mbox{[}nc\mbox{]},  }\item[{int $\ast$}]{ret\+\_\+sum }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file main.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a9b765e754ae99b030c0282acee8b397a}\label{main_8c_a9b765e754ae99b030c0282acee8b397a}} 
+\index{main.\+c@{main.\+c}!aa@{aa}}
+\index{aa@{aa}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{aa}{aa}}
+{\footnotesize\ttfamily int aa\mbox{[}N\+U\+M\+\_\+\+R\+O\+WS\mbox{]}\mbox{[}N\+U\+M\+\_\+\+C\+O\+LS\mbox{]}}
+
+
+
+Definition at line 26 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a71ab50c4ac4dceffb2edf92ca8ba4b63}\label{main_8c_a71ab50c4ac4dceffb2edf92ca8ba4b63}} 
+\index{main.\+c@{main.\+c}!dummy@{dummy}}
+\index{dummy@{dummy}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{dummy}{dummy}}
+{\footnotesize\ttfamily int dummy\mbox{[}D\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE/sizeof(int)\mbox{]}}
+
+
+
+Definition at line 25 of file main.\+c.
+
