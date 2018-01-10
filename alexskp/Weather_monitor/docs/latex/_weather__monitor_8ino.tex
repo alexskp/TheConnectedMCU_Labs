@@ -1,0 +1,463 @@
+\hypertarget{_weather__monitor_8ino}{}\section{Weather\+\_\+monitor/\+Weather\+\_\+monitor.ino File Reference}
+\label{_weather__monitor_8ino}\index{Weather\+\_\+monitor/\+Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor/\+Weather\+\_\+monitor.\+ino}}
+{\ttfamily \#include $<$M\+R\+F24\+G.\+h$>$}\newline
+{\ttfamily \#include $<$D\+E\+I\+Pc\+K.\+h$>$}\newline
+{\ttfamily \#include $<$D\+E\+W\+Fc\+K.\+h$>$}\newline
+{\ttfamily \#include $<$S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+S\+S\+D1306.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_weather__monitor_8ino_a9065e33a0ffff5f88cb1bb46e2bb38f3}{O\+L\+E\+D\+\_\+\+M\+O\+SI}~32
+\item 
+\#define \hyperlink{_weather__monitor_8ino_a8ada351153327868280ab3e62367f927}{O\+L\+E\+D\+\_\+\+C\+LK}~33
+\item 
+\#define \hyperlink{_weather__monitor_8ino_ab92f2aedff7d366df56a26b3c9c9d795}{O\+L\+E\+D\+\_\+\+DC}~30
+\item 
+\#define \hyperlink{_weather__monitor_8ino_ab68a9b3dbffcafd9849e74c4998b8840}{O\+L\+E\+D\+\_\+\+CS}~29
+\item 
+\#define \hyperlink{_weather__monitor_8ino_a619e07239fb3b9b14d40646ab41d5b4f}{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}~31
+\item 
+\#define \hyperlink{_weather__monitor_8ino_a0999ef52ab573032899b9a121c8b4f56}{U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE}
+\item 
+\#define \hyperlink{_weather__monitor_8ino_a695a93af45d920c92b31480f73207dbe}{Wi\+Fi\+Connect\+Macro}()~de\+I\+Pc\+K.\+wf\+Connect(\hyperlink{_weather__monitor_8ino_a6d4a0a4278dcba2bd3f1a41ebf5157a5}{sz\+Ssid}, \hyperlink{_weather__monitor_8ino_a498a9cc5754dacf2e488cddd337a5f4f}{sz\+Pass\+Phrase}, \&status)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}{S\+T\+A\+TE} \{ \newline
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE} = 0, 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a20391dd2915a0e64343d24c2f2e40b95}{C\+O\+N\+N\+E\+CT}, 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a350c89c49d1096cfc697707cfc8a5b36}{T\+C\+P\+C\+O\+N\+N\+E\+CT}, 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a61aa7ff70b76bff0fda378cf61d6afbc}{W\+R\+I\+TE}, 
+\newline
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647acb9be765f361bb7efb9073730aac92c6}{R\+E\+AD}, 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a685f73194ad125cbc784c3210cdb3449}{C\+L\+O\+SE}, 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a9c954bcf443428c80b0f107b3bc48749}{D\+O\+NE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Adafruit\+\_\+\+S\+S\+D1306 \hyperlink{_weather__monitor_8ino_a1671c15ea8b66182fa3e462ac06caf2d}{display} (\hyperlink{_weather__monitor_8ino_a9065e33a0ffff5f88cb1bb46e2bb38f3}{O\+L\+E\+D\+\_\+\+M\+O\+SI}, \hyperlink{_weather__monitor_8ino_a8ada351153327868280ab3e62367f927}{O\+L\+E\+D\+\_\+\+C\+LK}, \hyperlink{_weather__monitor_8ino_ab92f2aedff7d366df56a26b3c9c9d795}{O\+L\+E\+D\+\_\+\+DC}, \hyperlink{_weather__monitor_8ino_a619e07239fb3b9b14d40646ab41d5b4f}{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}, \hyperlink{_weather__monitor_8ino_ab68a9b3dbffcafd9849e74c4998b8840}{O\+L\+E\+D\+\_\+\+CS})
+\item 
+void \hyperlink{_weather__monitor_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{_weather__monitor_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{_weather__monitor_8ino_ab1e637952f2337823090f6d093da4c12}{displ\+\_\+weather} (void)
+\item 
+void \hyperlink{_weather__monitor_8ino_a9fca7a32c7752a91c7f2b80ac424ae0e}{json\+\_\+parse} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_weather__monitor_8ino_ab86a403a2a104e7fabbc34f3116ed1d4}{sz\+I\+P\+Server} = \char`\"{}http\+://api.\+openweathermap.\+org\char`\"{}
+\item 
+uint16\+\_\+t \hyperlink{_weather__monitor_8ino_a88e932baaa40e28779d94f226f5948a0}{port\+Server} = 80
+\item 
+const char $\ast$ \hyperlink{_weather__monitor_8ino_a6d4a0a4278dcba2bd3f1a41ebf5157a5}{sz\+Ssid} = \char`\"{}redmi1\char`\"{}
+\item 
+const char $\ast$ \hyperlink{_weather__monitor_8ino_a498a9cc5754dacf2e488cddd337a5f4f}{sz\+Pass\+Phrase} = \char`\"{}87654321\char`\"{}
+\item 
+\hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}{S\+T\+A\+TE} \hyperlink{_weather__monitor_8ino_a390ef51e2cfd455504254347218a71ca}{state} = \hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a20391dd2915a0e64343d24c2f2e40b95}{C\+O\+N\+N\+E\+CT}
+\item 
+unsigned \hyperlink{_weather__monitor_8ino_adb18b6f6efb06ceb6d55a33e9238f58c}{t\+Start} = 0
+\item 
+unsigned \hyperlink{_weather__monitor_8ino_a13e5b20be560ae81e73077e2e6c060dd}{t\+Wait} = 30000
+\item 
+T\+C\+P\+Socket \hyperlink{_weather__monitor_8ino_a04eefc95dcf761d8a956d1b0d9c25226}{tcp\+Socket}
+\item 
+byte \hyperlink{_weather__monitor_8ino_a1703b63154dd86de08d67defb88863c0}{rgb\+Read} \mbox{[}1024\mbox{]}
+\item 
+byte \hyperlink{_weather__monitor_8ino_a0990cd80a9c34e96dafbc001af446b06}{rgb\+Write\+Stream} \mbox{[}$\,$\mbox{]} = \char`\"{}G\+ET /data/2.\+5/\hyperlink{_weather__monitor_8ino_a3f5ff30909a7914cb8eb33a054f67722}{weather}?q=Kiev,ua\&units=metric\&appid=076b34eafcb4c2fcf0923018a3cf7fb6\textbackslash{}n\+Host\+: api.\+openweathermap.\+org\textbackslash{}n\+Connection\+: close\textbackslash{}n\char`\"{}
+\item 
+int \hyperlink{_weather__monitor_8ino_acbdcae1943d12f8baa3ea151e6028b65}{cb\+Write\+Stream} = sizeof(\hyperlink{_weather__monitor_8ino_a0990cd80a9c34e96dafbc001af446b06}{rgb\+Write\+Stream})
+\item 
+const char $\ast$ \hyperlink{_weather__monitor_8ino_a3f5ff30909a7914cb8eb33a054f67722}{weather}
+\item 
+double \hyperlink{_weather__monitor_8ino_a9fb78358ae4b0a049a0d1b37dc4cffec}{temp}
+\item 
+double \hyperlink{_weather__monitor_8ino_a19e734a068d8a801de60c91fd69bc065}{temp\+\_\+min}
+\item 
+double \hyperlink{_weather__monitor_8ino_a73dae65344123317a4a416e34b6cc29d}{temp\+\_\+max}
+\item 
+int \hyperlink{_weather__monitor_8ino_ad19429a485400193c6dfc8c71b151c06}{pressure}
+\item 
+int \hyperlink{_weather__monitor_8ino_a405f237eaa8a513a9682fbb6e44c4860}{humidity}
+\item 
+double \hyperlink{_weather__monitor_8ino_a01a62de6de3acaa68a34a386b9c374a7}{wind\+\_\+speed}
+\item 
+int \hyperlink{_weather__monitor_8ino_a1dfaa72d9fe500cb55105c1bbe92b327}{wind\+\_\+deg}
+\item 
+const char $\ast$ \hyperlink{_weather__monitor_8ino_aa69b2105b445fb74380087765ddab644}{city}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_weather__monitor_8ino_a8ada351153327868280ab3e62367f927}\label{_weather__monitor_8ino_a8ada351153327868280ab3e62367f927}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!O\+L\+E\+D\+\_\+\+C\+LK@{O\+L\+E\+D\+\_\+\+C\+LK}}
+\index{O\+L\+E\+D\+\_\+\+C\+LK@{O\+L\+E\+D\+\_\+\+C\+LK}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{O\+L\+E\+D\+\_\+\+C\+LK}{OLED\_CLK}}
+{\footnotesize\ttfamily \#define O\+L\+E\+D\+\_\+\+C\+LK~33}
+
+
+
+Definition at line 38 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_ab68a9b3dbffcafd9849e74c4998b8840}\label{_weather__monitor_8ino_ab68a9b3dbffcafd9849e74c4998b8840}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!O\+L\+E\+D\+\_\+\+CS@{O\+L\+E\+D\+\_\+\+CS}}
+\index{O\+L\+E\+D\+\_\+\+CS@{O\+L\+E\+D\+\_\+\+CS}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{O\+L\+E\+D\+\_\+\+CS}{OLED\_CS}}
+{\footnotesize\ttfamily \#define O\+L\+E\+D\+\_\+\+CS~29}
+
+
+
+Definition at line 40 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_ab92f2aedff7d366df56a26b3c9c9d795}\label{_weather__monitor_8ino_ab92f2aedff7d366df56a26b3c9c9d795}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!O\+L\+E\+D\+\_\+\+DC@{O\+L\+E\+D\+\_\+\+DC}}
+\index{O\+L\+E\+D\+\_\+\+DC@{O\+L\+E\+D\+\_\+\+DC}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{O\+L\+E\+D\+\_\+\+DC}{OLED\_DC}}
+{\footnotesize\ttfamily \#define O\+L\+E\+D\+\_\+\+DC~30}
+
+
+
+Definition at line 39 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a9065e33a0ffff5f88cb1bb46e2bb38f3}\label{_weather__monitor_8ino_a9065e33a0ffff5f88cb1bb46e2bb38f3}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!O\+L\+E\+D\+\_\+\+M\+O\+SI@{O\+L\+E\+D\+\_\+\+M\+O\+SI}}
+\index{O\+L\+E\+D\+\_\+\+M\+O\+SI@{O\+L\+E\+D\+\_\+\+M\+O\+SI}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{O\+L\+E\+D\+\_\+\+M\+O\+SI}{OLED\_MOSI}}
+{\footnotesize\ttfamily \#define O\+L\+E\+D\+\_\+\+M\+O\+SI~32}
+
+
+
+Definition at line 37 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a619e07239fb3b9b14d40646ab41d5b4f}\label{_weather__monitor_8ino_a619e07239fb3b9b14d40646ab41d5b4f}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!O\+L\+E\+D\+\_\+\+R\+E\+S\+ET@{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}}
+\index{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET@{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}{OLED\_RESET}}
+{\footnotesize\ttfamily \#define O\+L\+E\+D\+\_\+\+R\+E\+S\+ET~31}
+
+
+
+Definition at line 41 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a0999ef52ab573032899b9a121c8b4f56}\label{_weather__monitor_8ino_a0999ef52ab573032899b9a121c8b4f56}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE@{U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE}}
+\index{U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE@{U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE}{USE\_WPA2\_PASSPHRASE}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+W\+P\+A2\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+SE}
+
+
+
+Definition at line 56 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a695a93af45d920c92b31480f73207dbe}\label{_weather__monitor_8ino_a695a93af45d920c92b31480f73207dbe}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!Wi\+Fi\+Connect\+Macro@{Wi\+Fi\+Connect\+Macro}}
+\index{Wi\+Fi\+Connect\+Macro@{Wi\+Fi\+Connect\+Macro}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{Wi\+Fi\+Connect\+Macro}{WiFiConnectMacro}}
+{\footnotesize\ttfamily \#define Wi\+Fi\+Connect\+Macro(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~de\+I\+Pc\+K.\+wf\+Connect(\hyperlink{_weather__monitor_8ino_a6d4a0a4278dcba2bd3f1a41ebf5157a5}{sz\+Ssid}, \hyperlink{_weather__monitor_8ino_a498a9cc5754dacf2e488cddd337a5f4f}{sz\+Pass\+Phrase}, \&status)}
+
+
+
+Definition at line 66 of file Weather\+\_\+monitor.\+ino.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!S\+T\+A\+TE@{S\+T\+A\+TE}}
+\index{S\+T\+A\+TE@{S\+T\+A\+TE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{S\+T\+A\+TE}{STATE}}
+{\footnotesize\ttfamily enum \hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}{S\+T\+A\+TE}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647ac157bdf0b85a40d2619cbc8bc1ae5fe2}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+N\+N\+E\+CT@{C\+O\+N\+N\+E\+CT}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!C\+O\+N\+N\+E\+CT@{C\+O\+N\+N\+E\+CT}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a20391dd2915a0e64343d24c2f2e40b95}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a20391dd2915a0e64343d24c2f2e40b95}} 
+C\+O\+N\+N\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+C\+O\+N\+N\+E\+CT@{T\+C\+P\+C\+O\+N\+N\+E\+CT}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!T\+C\+P\+C\+O\+N\+N\+E\+CT@{T\+C\+P\+C\+O\+N\+N\+E\+CT}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a350c89c49d1096cfc697707cfc8a5b36}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a350c89c49d1096cfc697707cfc8a5b36}} 
+T\+C\+P\+C\+O\+N\+N\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+R\+I\+TE@{W\+R\+I\+TE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!W\+R\+I\+TE@{W\+R\+I\+TE}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a61aa7ff70b76bff0fda378cf61d6afbc}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a61aa7ff70b76bff0fda378cf61d6afbc}} 
+W\+R\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+AD@{R\+E\+AD}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!R\+E\+AD@{R\+E\+AD}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647acb9be765f361bb7efb9073730aac92c6}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647acb9be765f361bb7efb9073730aac92c6}} 
+R\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+L\+O\+SE@{C\+L\+O\+SE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!C\+L\+O\+SE@{C\+L\+O\+SE}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a685f73194ad125cbc784c3210cdb3449}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a685f73194ad125cbc784c3210cdb3449}} 
+C\+L\+O\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+O\+NE@{D\+O\+NE}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!D\+O\+NE@{D\+O\+NE}}}\mbox{\Hypertarget{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a9c954bcf443428c80b0f107b3bc48749}\label{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a9c954bcf443428c80b0f107b3bc48749}} 
+D\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 110 of file Weather\+\_\+monitor.\+ino.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_weather__monitor_8ino_ab1e637952f2337823090f6d093da4c12}\label{_weather__monitor_8ino_ab1e637952f2337823090f6d093da4c12}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!displ\+\_\+weather@{displ\+\_\+weather}}
+\index{displ\+\_\+weather@{displ\+\_\+weather}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{displ\+\_\+weather()}{displ\_weather()}}
+{\footnotesize\ttfamily void displ\+\_\+weather (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 298 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a1671c15ea8b66182fa3e462ac06caf2d}\label{_weather__monitor_8ino_a1671c15ea8b66182fa3e462ac06caf2d}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!display@{display}}
+\index{display@{display}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+S\+S\+D1306 display (\begin{DoxyParamCaption}\item[{\hyperlink{_weather__monitor_8ino_a9065e33a0ffff5f88cb1bb46e2bb38f3}{O\+L\+E\+D\+\_\+\+M\+O\+SI}}]{,  }\item[{\hyperlink{_weather__monitor_8ino_a8ada351153327868280ab3e62367f927}{O\+L\+E\+D\+\_\+\+C\+LK}}]{,  }\item[{\hyperlink{_weather__monitor_8ino_ab92f2aedff7d366df56a26b3c9c9d795}{O\+L\+E\+D\+\_\+\+DC}}]{,  }\item[{\hyperlink{_weather__monitor_8ino_a619e07239fb3b9b14d40646ab41d5b4f}{O\+L\+E\+D\+\_\+\+R\+E\+S\+ET}}]{,  }\item[{\hyperlink{_weather__monitor_8ino_ab68a9b3dbffcafd9849e74c4998b8840}{O\+L\+E\+D\+\_\+\+CS}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a9fca7a32c7752a91c7f2b80ac424ae0e}\label{_weather__monitor_8ino_a9fca7a32c7752a91c7f2b80ac424ae0e}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!json\+\_\+parse@{json\+\_\+parse}}
+\index{json\+\_\+parse@{json\+\_\+parse}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{json\+\_\+parse()}{json\_parse()}}
+{\footnotesize\ttfamily void json\+\_\+parse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 343 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_weather__monitor_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!loop@{loop}}
+\index{loop@{loop}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_weather__monitor_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!setup@{setup}}
+\index{setup@{setup}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 161 of file Weather\+\_\+monitor.\+ino.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_weather__monitor_8ino_acbdcae1943d12f8baa3ea151e6028b65}\label{_weather__monitor_8ino_acbdcae1943d12f8baa3ea151e6028b65}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!cb\+Write\+Stream@{cb\+Write\+Stream}}
+\index{cb\+Write\+Stream@{cb\+Write\+Stream}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{cb\+Write\+Stream}{cbWriteStream}}
+{\footnotesize\ttfamily int cb\+Write\+Stream = sizeof(\hyperlink{_weather__monitor_8ino_a0990cd80a9c34e96dafbc001af446b06}{rgb\+Write\+Stream})}
+
+
+
+Definition at line 131 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_aa69b2105b445fb74380087765ddab644}\label{_weather__monitor_8ino_aa69b2105b445fb74380087765ddab644}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!city@{city}}
+\index{city@{city}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{city}{city}}
+{\footnotesize\ttfamily const char$\ast$ city}
+
+
+
+Definition at line 141 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a405f237eaa8a513a9682fbb6e44c4860}\label{_weather__monitor_8ino_a405f237eaa8a513a9682fbb6e44c4860}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!humidity@{humidity}}
+\index{humidity@{humidity}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{humidity}{humidity}}
+{\footnotesize\ttfamily int humidity}
+
+
+
+Definition at line 138 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a88e932baaa40e28779d94f226f5948a0}\label{_weather__monitor_8ino_a88e932baaa40e28779d94f226f5948a0}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!port\+Server@{port\+Server}}
+\index{port\+Server@{port\+Server}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{port\+Server}{portServer}}
+{\footnotesize\ttfamily uint16\+\_\+t port\+Server = 80}
+
+
+
+Definition at line 50 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_ad19429a485400193c6dfc8c71b151c06}\label{_weather__monitor_8ino_ad19429a485400193c6dfc8c71b151c06}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!pressure@{pressure}}
+\index{pressure@{pressure}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{pressure}{pressure}}
+{\footnotesize\ttfamily int pressure}
+
+
+
+Definition at line 137 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a1703b63154dd86de08d67defb88863c0}\label{_weather__monitor_8ino_a1703b63154dd86de08d67defb88863c0}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!rgb\+Read@{rgb\+Read}}
+\index{rgb\+Read@{rgb\+Read}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{rgb\+Read}{rgbRead}}
+{\footnotesize\ttfamily byte rgb\+Read\mbox{[}1024\mbox{]}}
+
+
+
+Definition at line 127 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a0990cd80a9c34e96dafbc001af446b06}\label{_weather__monitor_8ino_a0990cd80a9c34e96dafbc001af446b06}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!rgb\+Write\+Stream@{rgb\+Write\+Stream}}
+\index{rgb\+Write\+Stream@{rgb\+Write\+Stream}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{rgb\+Write\+Stream}{rgbWriteStream}}
+{\footnotesize\ttfamily byte rgb\+Write\+Stream\mbox{[}$\,$\mbox{]} = \char`\"{}G\+ET /data/2.\+5/\hyperlink{_weather__monitor_8ino_a3f5ff30909a7914cb8eb33a054f67722}{weather}?q=Kiev,ua\&units=metric\&appid=076b34eafcb4c2fcf0923018a3cf7fb6\textbackslash{}n\+Host\+: api.\+openweathermap.\+org\textbackslash{}n\+Connection\+: close\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 130 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a390ef51e2cfd455504254347218a71ca}\label{_weather__monitor_8ino_a390ef51e2cfd455504254347218a71ca}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!state@{state}}
+\index{state@{state}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647}{S\+T\+A\+TE} state = \hyperlink{_weather__monitor_8ino_a275a67132f10277ada3a0ee3d616b647a20391dd2915a0e64343d24c2f2e40b95}{C\+O\+N\+N\+E\+CT}}
+
+
+
+Definition at line 121 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_ab86a403a2a104e7fabbc34f3116ed1d4}\label{_weather__monitor_8ino_ab86a403a2a104e7fabbc34f3116ed1d4}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!sz\+I\+P\+Server@{sz\+I\+P\+Server}}
+\index{sz\+I\+P\+Server@{sz\+I\+P\+Server}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{sz\+I\+P\+Server}{szIPServer}}
+{\footnotesize\ttfamily char$\ast$ sz\+I\+P\+Server = \char`\"{}http\+://api.\+openweathermap.\+org\char`\"{}}
+
+
+
+Definition at line 49 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a498a9cc5754dacf2e488cddd337a5f4f}\label{_weather__monitor_8ino_a498a9cc5754dacf2e488cddd337a5f4f}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!sz\+Pass\+Phrase@{sz\+Pass\+Phrase}}
+\index{sz\+Pass\+Phrase@{sz\+Pass\+Phrase}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{sz\+Pass\+Phrase}{szPassPhrase}}
+{\footnotesize\ttfamily const char$\ast$ sz\+Pass\+Phrase = \char`\"{}87654321\char`\"{}}
+
+
+
+Definition at line 65 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a6d4a0a4278dcba2bd3f1a41ebf5157a5}\label{_weather__monitor_8ino_a6d4a0a4278dcba2bd3f1a41ebf5157a5}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!sz\+Ssid@{sz\+Ssid}}
+\index{sz\+Ssid@{sz\+Ssid}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{sz\+Ssid}{szSsid}}
+{\footnotesize\ttfamily const char$\ast$ sz\+Ssid = \char`\"{}redmi1\char`\"{}}
+
+
+
+Definition at line 53 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a04eefc95dcf761d8a956d1b0d9c25226}\label{_weather__monitor_8ino_a04eefc95dcf761d8a956d1b0d9c25226}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!tcp\+Socket@{tcp\+Socket}}
+\index{tcp\+Socket@{tcp\+Socket}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{tcp\+Socket}{tcpSocket}}
+{\footnotesize\ttfamily T\+C\+P\+Socket tcp\+Socket}
+
+
+
+Definition at line 126 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a9fb78358ae4b0a049a0d1b37dc4cffec}\label{_weather__monitor_8ino_a9fb78358ae4b0a049a0d1b37dc4cffec}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!temp@{temp}}
+\index{temp@{temp}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily double temp}
+
+
+
+Definition at line 134 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a73dae65344123317a4a416e34b6cc29d}\label{_weather__monitor_8ino_a73dae65344123317a4a416e34b6cc29d}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!temp\+\_\+max@{temp\+\_\+max}}
+\index{temp\+\_\+max@{temp\+\_\+max}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{temp\+\_\+max}{temp\_max}}
+{\footnotesize\ttfamily double temp\+\_\+max}
+
+
+
+Definition at line 136 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a19e734a068d8a801de60c91fd69bc065}\label{_weather__monitor_8ino_a19e734a068d8a801de60c91fd69bc065}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!temp\+\_\+min@{temp\+\_\+min}}
+\index{temp\+\_\+min@{temp\+\_\+min}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{temp\+\_\+min}{temp\_min}}
+{\footnotesize\ttfamily double temp\+\_\+min}
+
+
+
+Definition at line 135 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_adb18b6f6efb06ceb6d55a33e9238f58c}\label{_weather__monitor_8ino_adb18b6f6efb06ceb6d55a33e9238f58c}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!t\+Start@{t\+Start}}
+\index{t\+Start@{t\+Start}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{t\+Start}{tStart}}
+{\footnotesize\ttfamily unsigned t\+Start = 0}
+
+
+
+Definition at line 123 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a13e5b20be560ae81e73077e2e6c060dd}\label{_weather__monitor_8ino_a13e5b20be560ae81e73077e2e6c060dd}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!t\+Wait@{t\+Wait}}
+\index{t\+Wait@{t\+Wait}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{t\+Wait}{tWait}}
+{\footnotesize\ttfamily unsigned t\+Wait = 30000}
+
+
+
+Definition at line 124 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a3f5ff30909a7914cb8eb33a054f67722}\label{_weather__monitor_8ino_a3f5ff30909a7914cb8eb33a054f67722}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!weather@{weather}}
+\index{weather@{weather}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{weather}{weather}}
+{\footnotesize\ttfamily const char$\ast$ weather}
+
+
+
+Definition at line 133 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a1dfaa72d9fe500cb55105c1bbe92b327}\label{_weather__monitor_8ino_a1dfaa72d9fe500cb55105c1bbe92b327}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!wind\+\_\+deg@{wind\+\_\+deg}}
+\index{wind\+\_\+deg@{wind\+\_\+deg}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{wind\+\_\+deg}{wind\_deg}}
+{\footnotesize\ttfamily int wind\+\_\+deg}
+
+
+
+Definition at line 140 of file Weather\+\_\+monitor.\+ino.
+
+\mbox{\Hypertarget{_weather__monitor_8ino_a01a62de6de3acaa68a34a386b9c374a7}\label{_weather__monitor_8ino_a01a62de6de3acaa68a34a386b9c374a7}} 
+\index{Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}!wind\+\_\+speed@{wind\+\_\+speed}}
+\index{wind\+\_\+speed@{wind\+\_\+speed}!Weather\+\_\+monitor.\+ino@{Weather\+\_\+monitor.\+ino}}
+\subsubsection{\texorpdfstring{wind\+\_\+speed}{wind\_speed}}
+{\footnotesize\ttfamily double wind\+\_\+speed}
+
+
+
+Definition at line 139 of file Weather\+\_\+monitor.\+ino.
+
